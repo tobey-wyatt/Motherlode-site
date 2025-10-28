@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Motherlode Consulting - I turn founders into CEOs. Build operational foundations and leadership capacity for 5-75 person companies.">
+    <meta name="keywords" content="operations consulting, founder CEO, business operations, strategic coaching, leadership development">
+    <meta name="author" content="Tobey Wyatt, Motherlode Consulting">
+    
+    <title>Motherlode Consulting - Turn Founders Into CEOs</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Motherlode Consulting - Turn Founders Into CEOs">
+    <meta property="og:description" content="I help founder-CEOs of 5-75 person companies build operational foundations and leadership capacity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.motherlode.biz">
+    <meta property="og:image" content="images/motherlode-social.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Motherlode Consulting">
+    <meta name="twitter:description" content="I turn founders into CEOs. Build operational foundations and leadership capacity.">
+</head>
+<body>
+    <!-- Particles Canvas (Background Animation) -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header (Fixed/Sticky Navigation) -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/motherlode-logo.png" alt="Motherlode Consulting" class="logo">
+                </a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="services.html#oir">Operator-in-Residence</a>
+                            <a href="services.html#coaching">Strategic Coaching</a>
+                            <a href="services.html#team-coaching">Leadership Team Coaching</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- CTA Button -->
+            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close" aria-label="Close menu">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services.html#oir">Operator-in-Residence</a>
+                        <a href="services.html#coaching">Strategic Coaching</a>
+                        <a href="services.html#team-coaching">Leadership Team Coaching</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero bg-cream">
+            <div class="container">
+                <img src="images/motherlode-logo.png" alt="Motherlode Consulting" class="hero-logo">
+                
+                <h1>I turn founders into CEOs</h1>
+                
+                <p class="hero-subtitle">
+                    You built the business. Now learn to lead it—whether that's 5 people or 50.
+                </p>
+                
+                <div class="btn-group">
+                    <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explanation Section -->
+        <section class="bg-white">
+            <div class="container">
+                <div class="max-w-800 text-center">
+                    <p style="font-size: 22px; line-height: 1.7;">
+                        I help founder-CEOs of 5-75 person companies build operational foundations and leadership capacity so you can scale without burning out or compromising your vision.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="bg-cream">
+            <div class="container">
+                <h2 class="text-center mb-60">Choose Your Level of Support</h2>
+                
+                <div class="grid-3col">
+                    <!-- Service Card 1: Operator-in-Residence -->
+                    <div class="card service-card">
+                        <div class="card-border teal"></div>
+                        
+                        <div class="service-icon teal">
+                            <span>👥</span>
+                        </div>
+                        
+                        <h3>Operator-in-Residence</h3>
+                        
+                        <div class="service-price">$297/month</div>
+                        
+                        <p class="service-description">
+                            Group coaching + peer advisory for 5 founder-CEOs. Weekly calls, hot seat format, tactical solutions.
+                        </p>
+                        
+                        <ul class="service-benefits">
+                            <li>Weekly momentum without $25K fees</li>
+                            <li>Real problems solved live</li>
+                            <li>Board of advisors, not support group</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-primary">Join Waitlist - Starting Q4</a>
+                    </div>
+                    
+                    <!-- Service Card 2: Strategic Coaching -->
+                    <div class="card service-card">
+                        <div class="card-border purple"></div>
+                        
+                        <div class="service-icon purple">
+                            <span>👤</span>
+                        </div>
+                        
+                        <h3>Strategic Coaching</h3>
+                        
+                        <div class="service-price">$1,500/month</div>
+                        
+                        <div class="special-badge">Founding Members: $1,200</div>
+                        
+                        <p class="service-description">
+                            Your weekly COO office hours. 1:1 strategic thinking partnership. Month-to-month commitment.
+                        </p>
+                        
+                        <ul class="service-benefits">
+                            <li>Dedicated hour every week</li>
+                            <li>Thinking partner who's been in the seat</li>
+                            <li>Confidence for tough calls</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                    </div>
+                    
+                    <!-- Service Card 3: Leadership Team Coaching -->
+                    <div class="card service-card">
+                        <div class="card-border cerulean"></div>
+                        
+                        <div class="service-icon cerulean">
+                            <span>🎯</span>
+                        </div>
+                        
+                        <h3>Leadership Team Coaching</h3>
+                        
+                        <div class="service-price">$4,500/month</div>
+                        
+                        <p class="service-description">
+                            CEO coaching + team access. Observe meetings, coach team, facilitate strategic sessions.
+                        </p>
+                        
+                        <ul class="service-benefits">
+                            <li>10-12 hours/month total support</li>
+                            <li>Full system visibility</li>
+                            <li>Build capacity, not dependency</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work With Me Section -->
+        <section class="bg-teal-wash">
+            <div class="container">
+                <h2 class="text-center mb-60">Why Founders Work With Me</h2>
+                
+                <div class="grid-2col">
+                    <div class="feature-point">
+                        <div class="feature-icon teal">
+                            <span>🔍</span>
+                        </div>
+                        <h4>20+ Years In The Trenches</h4>
+                        <p>
+                            From bootstrapped startups to Fortune 50 boardrooms. I've operated at every scale—not just studied it.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-point">
+                        <div class="feature-icon purple">
+                            <span>🎯</span>
+                        </div>
+                        <h4>Diagnosis Before Solutions</h4>
+                        <p>
+                            Most problems aren't what they appear to be. I find root causes so you stop wasting money on fixes that don't stick.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-point">
+                        <div class="feature-icon cerulean">
+                            <span>🤖</span>
+                        </div>
+                        <h4>AI-Enhanced Analysis</h4>
+                        <p>
+                            I process more context than humanly possible, finding patterns others miss while keeping the human judgment.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-point">
+                        <div class="feature-icon hot-pink">
+                            <span>💪</span>
+                        </div>
+                        <h4>Operator Who Coaches</h4>
+                        <p>
+                            Not a coach who read about operations. I've been CEO, COO, and interim exec—I understand the weight you carry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Work Section -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="text-center mb-60">How We Work Together</h2>
+                
+                <div class="max-w-900 process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Discovery Call</h4>
+                            <p>
+                                We talk about where you are, where you want to go, and what's getting in the way. No pitch, just conversation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Choose Your Path</h4>
+                            <p>
+                                Based on your needs and readiness, we determine which support model fits best: group, 1:1, or team coaching.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Start Building</h4>
+                            <p>
+                                Week one, we're already working on real problems. No six-month assessments—immediate, practical progress.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Ongoing Support</h4>
+                            <p>
+                                Consistent weekly momentum keeps issues from becoming crises. Build the muscle memory of good leadership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-60">
+                    <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-purple-wash">
+            <div class="container">
+                <h2 class="text-center mb-60">What Founders Say</h2>
+                
+                <div class="grid-2col">
+                    <!-- ========================================
+                         CLIENT TESTIMONIALS INSERTION POINT
+                         ========================================
+                         Add 4-6 testimonials in this format:
+                         
+                         <div class="testimonial-card">
+                             <div class="quote-icon teal">"</div>
+                             <p class="testimonial-quote">
+                                 [Full testimonial quote here]
+                             </p>
+                             <div class="testimonial-author">[Name]</div>
+                             <div class="testimonial-title">[Title, Company]</div>
+                         </div>
+                         
+                         Rotate colors: teal, purple, hot-pink, cerulean
+                         ======================================== -->
+                    
+                    <!-- Example Testimonial 1 (REPLACE WITH REAL) -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon teal">"</div>
+                        <p class="testimonial-quote">
+                            Working with Tobey transformed how I think about operations. She helped me see the root causes I'd been missing for years.
+                        </p>
+                        <div class="testimonial-author">Client Name</div>
+                        <div class="testimonial-title">CEO, Company Name</div>
+                    </div>
+                    
+                    <!-- Example Testimonial 2 (REPLACE WITH REAL) -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon purple">"</div>
+                        <p class="testimonial-quote">
+                            Finally, someone who understands the weight of being CEO. Tobey's been in the seat—she gets it.
+                        </p>
+                        <div class="testimonial-author">Client Name</div>
+                        <div class="testimonial-title">Founder & CEO, Company Name</div>
+                    </div>
+                    
+                    <!-- Example Testimonial 3 (REPLACE WITH REAL) -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon cerulean">"</div>
+                        <p class="testimonial-quote">
+                            Not another coach selling frameworks. Tobey diagnoses what's actually broken and gives me tactical next steps.
+                        </p>
+                        <div class="testimonial-author">Client Name</div>
+                        <div class="testimonial-title">CEO, Company Name</div>
+                    </div>
+                    
+                    <!-- Example Testimonial 4 (REPLACE WITH REAL) -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon hot-pink">"</div>
+                        <p class="testimonial-quote">
+                            The best investment I've made in my business. Tobey saved me from months of expensive mistakes.
+                        </p>
+                        <div class="testimonial-author">Client Name</div>
+                        <div class="testimonial-title">Founder, Company Name</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="bg-cream">
+            <div class="container">
+                <div class="max-w-800 text-center">
+                    <h2>Ready to Stop Playing Whack-a-Mole?</h2>
+                    <p style="font-size: 20px; margin-bottom: 40px;">
+                        Let's figure out what's actually broken in your operations—and build systems that stick.
+                    </p>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                        <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h4>Motherlode Consulting</h4>
+                    <p>
+                        I turn founders into CEOs. Build operational foundations for 5-75 person companies.
+                    </p>
+                    <div class="social-links">
+                        <!-- ========================================
+                             LINKEDIN URL INSERTION POINT #1
+                             Replace "#" with actual LinkedIn URL
+                             ======================================== -->
+                        <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <span>in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Motherlode Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         GHL POPUP FORM INSERTION POINT
+         ========================================
+         Paste your GoHighLevel popup form script here
+         (just before the closing </body> tag)
+         Look for <script> tags from your current site
+         ======================================== -->
+
+    <!-- JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

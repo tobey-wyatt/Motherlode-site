@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Motherlode Consulting Services - Operator-in-Residence, Strategic Coaching, and Leadership Team Coaching for founder-CEOs.">
+    
+    <title>Services - Motherlode Consulting</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/motherlode-logo.png" alt="Motherlode Consulting" class="logo">
+                </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <div class="dropdown-content">
+                            <a href="#oir">Operator-in-Residence</a>
+                            <a href="#coaching">Strategic Coaching</a>
+                            <a href="#team-coaching">Leadership Team Coaching</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close" aria-label="Close menu">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <div class="dropdown-content">
+                        <a href="#oir">Operator-in-Residence</a>
+                        <a href="#coaching">Strategic Coaching</a>
+                        <a href="#team-coaching">Leadership Team Coaching</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Services Hero -->
+        <section class="bg-cream" style="padding-top: 140px; padding-bottom: 60px;">
+            <div class="container">
+                <div class="max-w-900 text-center">
+                    <h1>Choose Your Level of Support</h1>
+                    <p style="font-size: 20px;">
+                        Whether you need peer support, 1:1 strategic partnership, or team-level coaching—I meet you where you are and build what you need.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Compare Section -->
+        <section class="bg-white" style="padding: 60px 0;">
+            <div class="container">
+                <div class="grid-3col">
+                    <div class="card">
+                        <h4 style="color: #0299B3;">Operator-in-Residence</h4>
+                        <p style="font-size: 28px; font-weight: 700; margin: 16px 0;">$297/month</p>
+                        <p style="font-size: 15px;">Group coaching + peer advisory</p>
+                        <a href="#oir" class="btn btn-outline" style="margin-top: 20px;">Learn More</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h4 style="color: #5E18E8;">Strategic Coaching</h4>
+                        <p style="font-size: 28px; font-weight: 700; margin: 16px 0;">$1,500/month</p>
+                        <p style="font-size: 15px;">1:1 weekly COO office hours</p>
+                        <a href="#coaching" class="btn btn-outline" style="margin-top: 20px;">Learn More</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h4 style="color: #5372FF;">Leadership Team Coaching</h4>
+                        <p style="font-size: 28px; font-weight: 700; margin: 16px 0;">$4,500/month</p>
+                        <p style="font-size: 15px;">CEO coaching + team access</p>
+                        <a href="#team-coaching" class="btn btn-outline" style="margin-top: 20px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SERVICE 1: OPERATOR-IN-RESIDENCE
+             ======================================== -->
+        <section id="oir" class="service-detail-section bg-teal-wash">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-icon teal" style="margin: 0 auto 24px;">
+                        <span style="font-size: 36px;">👥</span>
+                    </div>
+                    
+                    <h2>Operator-in-Residence</h2>
+                    <div class="service-price">$297/month</div>
+                    
+                    <div class="max-w-800" style="margin: 0 auto;">
+                        <h3>COO Power + Board of Advisor Support</h3>
+                        
+                        <p style="font-size: 18px;">
+                            Group coaching for 5 founder-CEOs who need both strategic and tactical support from people who've actually been in the seat. Not a networking group. Not a support group. A working session where real problems get solved live.
+                        </p>
+                        
+                        <h4 style="margin-top: 40px;">The Problem This Solves</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li>Every decision lands on your desk alone</li>
+                            <li>Your team can't understand the weight you carry</li>
+                            <li>Venting to investors/board members feels dangerous</li>
+                            <li>Your social circles are tired of hearing about business problems</li>
+                            <li>Executive coaches give theory, you need tactical reality</li>
+                            <li>You're tired of pretending everything's fine</li>
+                        </ul>
+                        
+                        <h4>The Format</h4>
+                        <div class="service-format">
+                            <div class="format-item">
+                                <h4>Weekly Calls</h4>
+                                <p>30-90 minutes based on cohort size</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>'Hot Seat' Structure</h4>
+                                <p>Guaranteed 15-minute focus on you every session</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Real Solutions</h4>
+                                <p>Real problems solved live, not theory</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Board of Advisors</h4>
+                                <p>4 other CEOs who actually understand</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>COO-Level Access</h4>
+                                <p>Email access between sessions for urgent thoughts</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>6-Month Cohorts</h4>
+                                <p>Deep relationships, then remix for fresh perspectives</p>
+                            </div>
+                        </div>
+                        
+                        <h4>What You Get</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li>Safe, judgment-free space with up to 4 peer advisors</li>
+                            <li>Weekly pressure release valve that's actually productive</li>
+                            <li>Tactical solutions you can implement tomorrow</li>
+                            <li>Strategic frameworks from 20+ years of operations</li>
+                            <li>Permission to not always have all the answers</li>
+                            <li>Confidence to make the really tough calls</li>
+                        </ul>
+                        
+                        <div style="background: #E8F4F6; padding: 32px; border-radius: 12px; margin: 40px 0;">
+                            <h4 style="margin-top: 0;">Why This Isn't Another Mastermind</h4>
+                            <p style="margin-bottom: 0;">
+                                Most CEO groups are either expensive country clubs ($25K+) or cheerleading circles. This is neither. You get a working session, not a support group. A board of advisors, not a social club. Real operational problem-solving with someone who's been CEO, COO, and interim exec—calling BS when needed.
+                            </p>
+                        </div>
+                        
+                        <h4>This Is For You If:</h4>
+                        <div class="fit-section">
+                            <div class="fit-box good-fit">
+                                <h4>✓ Good Fit</h4>
+                                <ul>
+                                    <li>You're tired of pretending everything's fine</li>
+                                    <li>You need both strategic and tactical support</li>
+                                    <li>You want real advice, not motivational fluff</li>
+                                    <li>You're ready to learn from others' mistakes</li>
+                                    <li>You value peer insights over guru worship</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fit-box not-fit">
+                                <h4>✗ Not a Fit</h4>
+                                <ul>
+                                    <li>You want 1:1 coaching (that's a different service)</li>
+                                    <li>You're looking for networking, not working</li>
+                                    <li>You can't commit to weekly sessions</li>
+                                    <li>You're not ready to be vulnerable with peers</li>
+                                    <li>You need therapy more than operations help</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-60">
+                            <h3>Investment: $297/month</h3>
+                            <p style="margin-bottom: 32px;">6-month commitment per cohort</p>
+                            <a href="contact.html" class="btn btn-primary">Join Waitlist - Starting Q4 2025</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SERVICE 2: STRATEGIC COACHING
+             ======================================== -->
+        <section id="coaching" class="service-detail-section bg-purple-wash">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-icon purple" style="margin: 0 auto 24px;">
+                        <span style="font-size: 36px;">👤</span>
+                    </div>
+                    
+                    <h2>Strategic Coaching</h2>
+                    <div class="service-price">$1,500/month</div>
+                    <div class="special-badge" style="display: block; text-align: center; margin-bottom: 32px;">
+                        Founding Members: $1,200/month
+                    </div>
+                    
+                    <div class="max-w-800" style="margin: 0 auto;">
+                        <h3>Your Weekly COO Office Hours</h3>
+                        
+                        <p style="font-size: 18px;">
+                            1:1 strategic thinking partnership. Not a professional coach selling frameworks—an experienced operator who's been in your seat. Your agenda, your priorities, your breakthrough.
+                        </p>
+                        
+                        <h4 style="margin-top: 40px;">The Problem This Solves</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li>Every decision lands on your desk alone</li>
+                            <li>Your team can't understand the weight you carry</li>
+                            <li>Venting to investors/board members feels dangerous</li>
+                            <li>Your social circles are tired of talking about business problems</li>
+                            <li>Executive coaches give theory, not tactical reality</li>
+                            <li>You're too busy fighting fires to think strategically</li>
+                        </ul>
+                        
+                        <h4>The Format</h4>
+                        <div class="service-format">
+                            <div class="format-item">
+                                <h4>Your Protected Hour</h4>
+                                <p>1 dedicated hour every week</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Your Agenda</h4>
+                                <p>Same time, same person, your priorities</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>COO-Level Access</h4>
+                                <p>Bring your messiest operational problems</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Compound Progress</h4>
+                                <p>Build momentum through consistency</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Complete Confidentiality</h4>
+                                <p>Your challenges stay between us—always</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Month-to-Month</h4>
+                                <p>No long-term contracts, stay as long as it's valuable</p>
+                            </div>
+                        </div>
+                        
+                        <h4>What You Get</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li>Safe, judgment-free space focused on YOUR problems</li>
+                            <li>A thinking partner who knows your whole story</li>
+                            <li>Tactical solutions you can implement tomorrow</li>
+                            <li>Strategic frameworks from 20+ years of operations</li>
+                            <li>Permission to not always have all the answers</li>
+                            <li>Confidence to make the really tough calls</li>
+                        </ul>
+                        
+                        <div style="background: #F0E8FA; padding: 32px; border-radius: 12px; margin: 40px 0;">
+                            <h4 style="margin-top: 0;">Why This Works</h4>
+                            <p style="margin-bottom: 0;">
+                                I'm not a professional coach selling you frameworks. I'm an experienced operator who's supported and been in your seat—from bootstrapped startups to Fortune 50 companies. Weekly creates compound clarity: catch issues before they become crises, build confidence through repetition. Real operational problem-solving with someone who understands the weight of the decisions you carry.
+                            </p>
+                        </div>
+                        
+                        <h4>This Is For You If:</h4>
+                        <div class="fit-section">
+                            <div class="fit-box good-fit">
+                                <h4>✓ Good Fit</h4>
+                                <ul>
+                                    <li>You need confidential strategic guidance</li>
+                                    <li>You want consistent weekly momentum</li>
+                                    <li>You value expertise over motivation</li>
+                                    <li>You're ready to tackle root causes</li>
+                                    <li>You prefer depth over networking</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fit-box not-fit">
+                                <h4>✗ Not a Fit</h4>
+                                <ul>
+                                    <li>You want full fractional COO services</li>
+                                    <li>You're looking for therapy or life coaching</li>
+                                    <li>You need someone to implement solutions</li>
+                                    <li>You can't commit to weekly sessions</li>
+                                    <li>You're not ready to do the work yourself</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-60">
+                            <h3>Investment: $1,500/month</h3>
+                            <p style="margin-bottom: 8px;"><strong>Founding Members: $1,200/month</strong></p>
+                            <p style="margin-bottom: 32px; font-size: 15px;">Month-to-month commitment</p>
+                            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SERVICE 3: LEADERSHIP TEAM COACHING
+             ======================================== -->
+        <section id="team-coaching" class="service-detail-section bg-cerulean-wash">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-icon cerulean" style="margin: 0 auto 24px;">
+                        <span style="font-size: 36px;">🎯</span>
+                    </div>
+                    
+                    <h2>Leadership Team Coaching</h2>
+                    <div class="service-price">$4,500/month</div>
+                    
+                    <div class="max-w-800" style="margin: 0 auto;">
+                        <h3>CEO Coaching + Team Access</h3>
+                        
+                        <p style="font-size: 18px;">
+                            You get 1:1 strategic coaching plus I observe your team's meetings, coach your direct reports, and facilitate strategic sessions. Build leadership capacity across your whole team, not just you.
+                        </p>
+                        
+                        <h4 style="margin-top: 40px;">The Problem This Solves</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li>You're the only strategic thinker on your team</li>
+                            <li>Your leadership team needs development but you don't have time to coach them</li>
+                            <li>Meetings are inefficient but you can't see why from inside them</li>
+                            <li>You need someone who can observe your systems and team in action</li>
+                            <li>You're building a leadership team, not just managing direct reports</li>
+                            <li>You want to build capacity, not dependency</li>
+                        </ul>
+                        
+                        <h4>The Format</h4>
+                        <div class="service-format">
+                            <div class="format-item">
+                                <h4>CEO Coaching</h4>
+                                <p>2 hours/month 1:1 strategic sessions</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Team Observation</h4>
+                                <p>4-6 hours/month attending key meetings</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Direct Report Coaching</h4>
+                                <p>2-3 hours/month coaching your leadership team</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Strategic Facilitation</h4>
+                                <p>2 hours/month facilitating offsites or planning sessions</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Full System Visibility</h4>
+                                <p>See how your operations actually work, not just how they look on paper</p>
+                            </div>
+                            <div class="format-item">
+                                <h4>Async Support</h4>
+                                <p>Email/Slack access for urgent questions between sessions</p>
+                            </div>
+                        </div>
+                        
+                        <h4>What You Get</h4>
+                        <ul style="margin-bottom: 32px;">
+                            <li><strong>10-12 hours/month total support</strong> distributed across CEO coaching, team observation, direct report coaching, and facilitation</li>
+                            <li>Full visibility into how your operations and team actually work</li>
+                            <li>Real-time coaching for your direct reports in their actual context</li>
+                            <li>Strategic facilitation for offsites and planning sessions</li>
+                            <li>Build leadership capacity across your team, not just you</li>
+                            <li>Someone who can spot patterns you can't see from inside</li>
+                        </ul>
+                        
+                        <div style="background: #E8EDFA; padding: 32px; border-radius: 12px; margin: 40px 0;">
+                            <h4 style="margin-top: 0;">Why This Works</h4>
+                            <p style="margin-bottom: 0;">
+                                You can't fix what you can't see. I observe your team in action—meetings, communication patterns, decision-making dynamics—and coach both you and your direct reports in real time. This isn't fractional COO (I'm not implementing). This is building your team's capacity to think strategically, communicate effectively, and operate at a higher level.
+                            </p>
+                        </div>
+                        
+                        <h4>This Is For You If:</h4>
+                        <div class="fit-section">
+                            <div class="fit-box good-fit">
+                                <h4>✓ Good Fit</h4>
+                                <ul>
+                                    <li>You have a leadership team (2-5 direct reports)</li>
+                                    <li>You want to develop your team, not just yourself</li>
+                                    <li>You're open to having someone observe your operations</li>
+                                    <li>You want to build capacity across your organization</li>
+                                    <li>You're ready for full-system visibility and coaching</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fit-box not-fit">
+                                <h4>✗ Not a Fit</h4>
+                                <ul>
+                                    <li>You're a solo founder without a leadership team</li>
+                                    <li>You want someone to implement, not coach</li>
+                                    <li>You're not ready for outside observation</li>
+                                    <li>Your team isn't open to external coaching</li>
+                                    <li>You need fractional COO (different service)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-60">
+                            <h3>Investment: $4,500/month</h3>
+                            <p style="margin-bottom: 32px;">10-12 hours/month total support across CEO coaching, team observation, and facilitation</p>
+                            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="bg-white">
+            <div class="container">
+                <div class="max-w-900">
+                    <h2 class="text-center mb-40">Not Sure Which Is Right?</h2>
+                    <p class="text-center" style="font-size: 18px; margin-bottom: 60px;">
+                        Let's talk through what you're dealing with and find the right fit. No pressure, just a real conversation about what you need.
+                    </p>
+                    
+                    <div class="text-center">
+                        <a href="contact.html" class="btn btn-primary" style="margin-right: 16px;">Book Discovery Call</a>
+                        <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Motherlode Consulting</h4>
+                    <p>
+                        I turn founders into CEOs. Build operational foundations for 5-75 person companies.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <span>in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Motherlode Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
