@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome for LinkedIn Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     
@@ -31,6 +34,157 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Motherlode Consulting">
     <meta name="twitter:description" content="I turn founders into CEOs. Build operational foundations and leadership capacity.">
+    
+    <style>
+        /* Testimonials Carousel Styles */
+        .testimonials-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .testimonial-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            text-align: center;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .testimonial-slide .quote-icon {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-slide .quote-icon.teal { color: #0299B3; }
+        .testimonial-slide .quote-icon.purple { color: #5E18E8; }
+        .testimonial-slide .quote-icon.cerulean { color: #5372FF; }
+        .testimonial-slide .quote-icon.hot-pink { color: #F20358; }
+        
+        .testimonial-slide .testimonial-quote {
+            font-size: 20px;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #2B2B2B;
+        }
+        
+        .testimonial-slide .testimonial-author {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+        
+        .testimonial-slide .testimonial-title {
+            font-size: 16px;
+            color: #2B2B2B;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #EBDBA3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background-color: #0299B3;
+            transform: scale(1.2);
+        }
+        
+        .carousel-dot:hover {
+            background-color: #5E18E8;
+        }
+        
+        /* LinkedIn Icon Styling */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #0077B5;
+            color: white;
+            border-radius: 4px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            background-color: #005582;
+        }
+        
+        /* Contact & Booking Section Styles */
+        .contact-booking-section {
+            padding: 80px 0;
+            background-color: #F5F1E8;
+        }
+        
+        .contact-booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .booking-column h3,
+        .contact-column h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        
+        .booking-description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #2B2B2B;
+        }
+        
+        .contact-form-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .contact-booking-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .calendly-inline-widget {
+                height: 600px !important;
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <!-- Particles Canvas (Background Animation) -->
@@ -58,12 +212,12 @@
                             <a href="services.html#team-coaching">Leadership Team Coaching</a>
                         </div>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact-booking">Contact</a></li>
                 </ul>
             </nav>
             
             <!-- CTA Button -->
-            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+            <a href="#contact-booking" class="btn btn-primary">Book Discovery Call</a>
             
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-toggle" aria-label="Open menu">
@@ -86,11 +240,11 @@
                         <a href="services.html#team-coaching">Leadership Team Coaching</a>
                     </div>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#contact-booking">Contact</a></li>
             </ul>
         </nav>
         <div class="btn-group">
-            <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+            <a href="#contact-booking" class="btn btn-primary">Book Discovery Call</a>
         </div>
     </div>
 
@@ -108,7 +262,7 @@
                 </p>
                 
                 <div class="btn-group">
-                    <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                    <a href="#contact-booking" class="btn btn-primary">Book Discovery Call</a>
                     <a href="services.html" class="btn btn-secondary">Explore Services</a>
                 </div>
             </div>
@@ -141,10 +295,10 @@
                         
                         <h3>Operator-in-Residence</h3>
                         
-                        <div class="service-price">$297/month</div>
+                        <div class="service-price">$300/month</div>
                         
                         <p class="service-description">
-                            Group coaching + peer advisory for 5 founder-CEOs. Weekly calls, hot seat format, tactical solutions.
+                            Group coaching + peer advisory for 5 founder-CEOs. Weekly calls, hot seat format, real problems diagnosed live.
                         </p>
                         
                         <ul class="service-benefits">
@@ -153,7 +307,7 @@
                             <li>Board of advisors, not support group</li>
                         </ul>
                         
-                        <a href="contact.html" class="btn btn-primary">Join Waitlist - Starting Q4</a>
+                        <a href="#contact-booking" class="btn btn-primary">Join Waitlist - Starting Q4</a>
                     </div>
                     
                     <!-- Service Card 2: Strategic Coaching -->
@@ -168,10 +322,10 @@
                         
                         <div class="service-price">$1,500/month</div>
                         
-                        <div class="special-badge">Founding Members: $1,200</div>
+                        <div class="special-badge">First 5 Clients: $1,200</div>
                         
                         <p class="service-description">
-                            Your weekly COO office hours. 1:1 strategic thinking partnership. Month-to-month commitment.
+                            Your weekly CEO thinking partner. 1:1 strategic coaching, your agenda, complete confidentiality. Month-to-month commitment.
                         </p>
                         
                         <ul class="service-benefits">
@@ -180,7 +334,7 @@
                             <li>Confidence for tough calls</li>
                         </ul>
                         
-                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                        <a href="#contact-booking" class="btn btn-primary">Book Discovery Call</a>
                     </div>
                     
                     <!-- Service Card 3: Leadership Team Coaching -->
@@ -196,16 +350,16 @@
                         <div class="service-price">$4,500/month</div>
                         
                         <p class="service-description">
-                            CEO coaching + team access. Observe meetings, coach team, facilitate strategic sessions.
+                            CEO coaching + team access. Observe meetings, coach team, facilitate strategic sessions. Build capacity, not dependency.
                         </p>
                         
                         <ul class="service-benefits">
-                            <li>10-12 hours/month total support</li>
+                            <li>Total strategic support for CEO + team</li>
                             <li>Full system visibility</li>
-                            <li>Build capacity, not dependency</li>
+                            <li>Develop diagnostic thinkers</li>
                         </ul>
                         
-                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
+                        <a href="#contact-booking" class="btn btn-primary">Book Discovery Call</a>
                     </div>
                 </div>
             </div>
@@ -223,7 +377,7 @@
                         </div>
                         <h4>20+ Years In The Trenches</h4>
                         <p>
-                            From bootstrapped startups to Fortune 50 boardrooms. I've operated at every scale—not just studied it.
+                            From scrappy bootstrapped startups to Fortune 50 giants. I've operated at every scale—not just studied it.
                         </p>
                     </div>
                     
@@ -251,9 +405,9 @@
                         <div class="feature-icon hot-pink">
                             <span>💪</span>
                         </div>
-                        <h4>Operator Who Coaches</h4>
+                        <h4>Visionary Operator</h4>
                         <p>
-                            Not a coach who read about operations. I've been CEO, COO, and interim exec—I understand the weight you carry.
+                            Not a coach who read about operations. I'm a visionary who deeply understands operations—I've been CEO, COO, and interim exec.
                         </p>
                     </div>
                 </div>
@@ -308,88 +462,115 @@
                 </div>
                 
                 <div class="text-center mt-60">
-                    <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+                    <a href="#contact-booking" class="btn btn-primary">Let's Talk</a>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section with Carousel -->
         <section class="bg-purple-wash">
             <div class="container">
                 <h2 class="text-center mb-60">What Founders Say</h2>
                 
-                <div class="grid-2col">
-                    <!-- ========================================
-                         CLIENT TESTIMONIALS INSERTION POINT
-                         ========================================
-                         Add 4-6 testimonials in this format:
-                         
-                         <div class="testimonial-card">
-                             <div class="quote-icon teal">"</div>
-                             <p class="testimonial-quote">
-                                 [Full testimonial quote here]
-                             </p>
-                             <div class="testimonial-author">[Name]</div>
-                             <div class="testimonial-title">[Title, Company]</div>
-                         </div>
-                         
-                         Rotate colors: teal, purple, hot-pink, cerulean
-                         ======================================== -->
-                    
-                    <!-- Example Testimonial 1 (REPLACE WITH REAL) -->
-                    <div class="testimonial-card">
+                <div class="testimonials-carousel">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
                         <div class="quote-icon teal">"</div>
                         <p class="testimonial-quote">
-                            Working with Tobey transformed how I think about operations. She helped me see the root causes I'd been missing for years.
+                            Thank you for all the time and wisdom you've poured into Temple Sholom. You have made us better in myriad ways – with better processes, improved communications, and a shared sense of mission. You have been a gift not only to our beautiful team as a whole, but to me personally.
                         </p>
-                        <div class="testimonial-author">Client Name</div>
-                        <div class="testimonial-title">CEO, Company Name</div>
+                        <div class="testimonial-author">Shoshanah</div>
+                        <div class="testimonial-title">Lead Rabbi, Chicago Synagogue</div>
                     </div>
                     
-                    <!-- Example Testimonial 2 (REPLACE WITH REAL) -->
-                    <div class="testimonial-card">
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
                         <div class="quote-icon purple">"</div>
                         <p class="testimonial-quote">
-                            Finally, someone who understands the weight of being CEO. Tobey's been in the seat—she gets it.
+                            As my company grew, managing everything from business development to HR became unsustainable. Motherlode helped establish the processes for efficient and sustainable business operations. THIS enabled me to focus on building great software products for our clients.
                         </p>
-                        <div class="testimonial-author">Client Name</div>
-                        <div class="testimonial-title">Founder & CEO, Company Name</div>
+                        <div class="testimonial-author">Keith</div>
+                        <div class="testimonial-title">Founder & CEO, Boutique Software Development</div>
                     </div>
                     
-                    <!-- Example Testimonial 3 (REPLACE WITH REAL) -->
-                    <div class="testimonial-card">
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
                         <div class="quote-icon cerulean">"</div>
                         <p class="testimonial-quote">
-                            Not another coach selling frameworks. Tobey diagnoses what's actually broken and gives me tactical next steps.
+                            Tobey helped me see how to make our abstract creative work measurable without losing what makes it special. She translated complex operations into plain English my team could actually use. For the first time, I had clarity on systems I'd been avoiding building.
                         </p>
-                        <div class="testimonial-author">Client Name</div>
-                        <div class="testimonial-title">CEO, Company Name</div>
+                        <div class="testimonial-author">Elliot</div>
+                        <div class="testimonial-title">Founder & CEO, Full Service Video Game Audio Agency</div>
                     </div>
                     
-                    <!-- Example Testimonial 4 (REPLACE WITH REAL) -->
-                    <div class="testimonial-card">
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide">
                         <div class="quote-icon hot-pink">"</div>
                         <p class="testimonial-quote">
-                            The best investment I've made in my business. Tobey saved me from months of expensive mistakes.
+                            Every week, Tobey helps me cut through the chaos and focus on what actually matters. She sees consequences I miss and helps me make decisions that land well across the organization.
                         </p>
-                        <div class="testimonial-author">Client Name</div>
-                        <div class="testimonial-title">Founder, Company Name</div>
+                        <div class="testimonial-author">Zach</div>
+                        <div class="testimonial-title">Founder & CEO, Mental Telehealth</div>
+                    </div>
+                    
+                    <!-- Carousel Navigation Dots -->
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-slide="0"></span>
+                        <span class="carousel-dot" data-slide="1"></span>
+                        <span class="carousel-dot" data-slide="2"></span>
+                        <span class="carousel-dot" data-slide="3"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section class="bg-cream">
+        <!-- Contact & Booking Section -->
+        <section id="contact-booking" class="contact-booking-section">
             <div class="container">
-                <div class="max-w-800 text-center">
-                    <h2>Ready to Stop Playing Whack-a-Mole?</h2>
-                    <p style="font-size: 20px; margin-bottom: 40px;">
-                        Let's figure out what's actually broken in your operations—and build systems that stick.
-                    </p>
-                    <div class="btn-group">
-                        <a href="contact.html" class="btn btn-primary">Book Discovery Call</a>
-                        <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                <h2 class="text-center mb-60">Let's Connect</h2>
+                
+                <div class="contact-booking-grid">
+                    <!-- Left Column: Calendly Booking -->
+                    <div class="booking-column">
+                        <h3>Book a Discovery Call</h3>
+                        <p class="booking-description">
+                            Schedule a 30-minute discovery call to discuss how things are going and see if we're a fit.
+                        </p>
+                        
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/motherlodebiz/website-booking?hide_event_type_details=1" style="min-width:320px;height:700px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                    
+                    <!-- Right Column: Contact Form -->
+                    <div class="contact-column">
+                        <h3>Send a Message</h3>
+                        <p class="booking-description">
+                            Prefer to reach out directly? Fill out the form and I'll get back to you within 24 hours.
+                        </p>
+                        
+                        <div class="contact-form-container">
+                            <!-- GHL Inline Contact Form -->
+                            <iframe
+                                src="https://api.leadconnectorhq.com/widget/form/SSGJpnpAzidXPL3QRWPm"
+                                style="width:100%;height:100%;border:none;border-radius:3px"
+                                id="inline-SSGJpnpAzidXPL3QRWPm" 
+                                data-layout="{'id':'INLINE'}"
+                                data-trigger-type="alwaysShow"
+                                data-trigger-value=""
+                                data-activation-type="alwaysActivated"
+                                data-activation-value=""
+                                data-deactivation-type="neverDeactivate"
+                                data-deactivation-value=""
+                                data-form-name="Website Contact Form"
+                                data-height="845"
+                                data-layout-iframe-id="inline-SSGJpnpAzidXPL3QRWPm"
+                                data-form-id="SSGJpnpAzidXPL3QRWPm"
+                                title="Website Contact Form">
+                            </iframe>
+                            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -407,12 +588,8 @@
                         I turn founders into CEOs. Build operational foundations for 5-75 person companies.
                     </p>
                     <div class="social-links">
-                        <!-- ========================================
-                             LINKEDIN URL INSERTION POINT #1
-                             Replace "#" with actual LinkedIn URL
-                             ======================================== -->
-                        <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
-                            <span>in</span>
+                        <a href="https://www.linkedin.com/in/tobeywyatt" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
@@ -423,7 +600,7 @@
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#contact-booking">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -443,13 +620,82 @@
         </div>
     </footer>
 
-    <!-- ========================================
-         GHL POPUP FORM INSERTION POINT
-         ========================================
-         Paste your GoHighLevel popup form script here
-         (just before the closing </body> tag)
-         Look for <script> tags from your current site
-         ======================================== -->
+    <!-- GHL Popup Form (appears on page load, can be minimized) -->
+    <iframe
+        src="https://api.leadconnectorhq.com/widget/form/SSGJpnpAzidXPL3QRWPm"
+        style="display:none;width:100%;height:100%;border:none;border-radius:3px"
+        id="polite-slide-in-right-SSGJpnpAzidXPL3QRWPm" 
+        data-layout="{'id':'POLITE_SLIDE_IN','minimizedTitle':'','isLeftAligned':false,'isRightAligned':true,'allowMinimize':false}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="leadCollected"
+        data-deactivation-value=""
+        data-form-name="Website Contact Form"
+        data-height="787"
+        data-layout-iframe-id="polite-slide-in-right-SSGJpnpAzidXPL3QRWPm"
+        data-form-id="SSGJpnpAzidXPL3QRWPm"
+        title="Website Contact Form">
+    </iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    <!-- Testimonials Carousel JavaScript -->
+    <script>
+        // Testimonials Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+        let autoRotate;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function startAutoRotate() {
+            autoRotate = setInterval(nextSlide, 7000); // Change slide every 7 seconds
+        }
+
+        function stopAutoRotate() {
+            clearInterval(autoRotate);
+        }
+
+        // Dot click handlers
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+                stopAutoRotate();
+                startAutoRotate(); // Restart auto-rotate after manual selection
+            });
+        });
+
+        // Pause on hover
+        const carousel = document.querySelector('.testimonials-carousel');
+        carousel.addEventListener('mouseenter', stopAutoRotate);
+        carousel.addEventListener('mouseleave', startAutoRotate);
+
+        // Start auto-rotation
+        startAutoRotate();
+    </script>
 
     <!-- JavaScript -->
     <script src="js/particles.js"></script>
