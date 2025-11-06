@@ -111,6 +111,46 @@
         .carousel-dot:hover {
             background-color: #5E18E8;
         }
+
+        /* Carousel Arrow Styling */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(94, 24, 232, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-arrow:hover {
+            background-color: rgba(94, 24, 232, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-arrow-left {
+            left: -25px;
+        }
+        
+        .carousel-arrow-right {
+            right: -25px;
+        }
+        
+        /* Hide arrows on mobile */
+        @media (max-width: 768px) {
+            .carousel-arrow {
+                display: none;
+            }
+        }
         
         /* LinkedIn Icon Styling */
         .social-icon {
