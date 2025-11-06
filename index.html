@@ -36,10 +36,11 @@
     <meta name="twitter:description" content="I turn founders into CEOs. Build operational foundations and leadership capacity.">
     
     <style>
-        /* Testimonials Carousel Styles */
+
+/* Testimonials Carousel Styles */
         .testimonials-carousel {
             position: relative;
-            max-width: 800px;
+            max-width: 700px; /* Narrower to create more space from arrows */
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -111,11 +112,11 @@
         .carousel-dot:hover {
             background-color: #5E18E8;
         }
-
+        
         /* Carousel Arrow Styling */
         .carousel-arrow {
             position: absolute;
-            top: 50%;
+            top: 40%;
             transform: translateY(-50%);
             background-color: rgba(94, 24, 232, 0.8);
             color: white;
@@ -138,11 +139,11 @@
         }
         
         .carousel-arrow-left {
-            left: -25px;
+            left: -80px; /* Further out from text */
         }
         
         .carousel-arrow-right {
-            right: -25px;
+            right: -80px; /* Further out from text */
         }
         
         /* Hide arrows on mobile */
@@ -669,6 +670,7 @@
             </div>
         </section>
 
+        
         <!-- Contact & Booking Section -->
         <section id="contact-booking" class="contact-booking-section">
             <div class="container">
@@ -785,80 +787,91 @@
     </iframe>
     <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
-    <!-- Testimonials Carousel JavaScript -->
 <!-- Testimonials Carousel JavaScript -->
     <script>
-        // Testimonials Carousel Functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const totalSlides = slides.length;
-        let autoRotate;
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Testimonials Carousel Functionality
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const totalSlides = slides.length;
+            let autoRotate;
 
-        function showSlide(index) {
-            // Hide all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-            
-            // Remove active from all dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Show current slide
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-        }
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Remove active from all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // Show current slide
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function startAutoRotate() {
-            autoRotate = setInterval(nextSlide, 7000); // Change slide every 7 seconds
-        }
-
-        function stopAutoRotate() {
-            clearInterval(autoRotate);
-        }
-
-        // Arrow click handlers
-        document.querySelector('.carousel-arrow-left').addEventListener('click', () => {
-            prevSlide();
-            stopAutoRotate();
-            startAutoRotate(); // Restart auto-rotate after manual navigation
-        });
-
-        document.querySelector('.carousel-arrow-right').addEventListener('click', () => {
-            nextSlide();
-            stopAutoRotate();
-            startAutoRotate(); // Restart auto-rotate after manual navigation
-        });
-
-        // Dot click handlers
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
                 showSlide(currentSlide);
-                stopAutoRotate();
-                startAutoRotate(); // Restart auto-rotate after manual selection
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            function startAutoRotate() {
+                autoRotate = setInterval(nextSlide, 7000);
+            }
+
+            function stopAutoRotate() {
+                clearInterval(autoRotate);
+            }
+
+            // Arrow click handlers
+            const leftArrow = document.querySelector('.carousel-arrow-left');
+            const rightArrow = document.querySelector('.carousel-arrow-right');
+            
+            if (leftArrow) {
+                leftArrow.addEventListener('click', () => {
+                    prevSlide();
+                    stopAutoRotate();
+                    startAutoRotate();
+                });
+            }
+            
+            if (rightArrow) {
+                rightArrow.addEventListener('click', () => {
+                    nextSlide();
+                    stopAutoRotate();
+                    startAutoRotate();
+                });
+            }
+
+            // Dot click handlers
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    stopAutoRotate();
+                    startAutoRotate();
+                });
             });
+
+            // Pause on hover
+            const carousel = document.querySelector('.testimonials-carousel');
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopAutoRotate);
+                carousel.addEventListener('mouseleave', startAutoRotate);
+            }
+
+            // Start auto-rotation
+            startAutoRotate();
         });
-
-        // Pause on hover
-        const carousel = document.querySelector('.testimonials-carousel');
-        carousel.addEventListener('mouseenter', stopAutoRotate);
-        carousel.addEventListener('mouseleave', startAutoRotate);
-
-        // Start auto-rotation
-        startAutoRotate();
     </script>
 
     <!-- JavaScript -->
