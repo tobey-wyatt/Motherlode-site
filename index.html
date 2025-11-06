@@ -786,6 +786,7 @@
     <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
     <!-- Testimonials Carousel JavaScript -->
+<!-- Testimonials Carousel JavaScript -->
     <script>
         // Testimonials Carousel Functionality
         let currentSlide = 0;
@@ -815,6 +816,11 @@
             showSlide(currentSlide);
         }
 
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
         function startAutoRotate() {
             autoRotate = setInterval(nextSlide, 7000); // Change slide every 7 seconds
         }
@@ -822,6 +828,19 @@
         function stopAutoRotate() {
             clearInterval(autoRotate);
         }
+
+        // Arrow click handlers
+        document.querySelector('.carousel-arrow-left').addEventListener('click', () => {
+            prevSlide();
+            stopAutoRotate();
+            startAutoRotate(); // Restart auto-rotate after manual navigation
+        });
+
+        document.querySelector('.carousel-arrow-right').addEventListener('click', () => {
+            nextSlide();
+            stopAutoRotate();
+            startAutoRotate(); // Restart auto-rotate after manual navigation
+        });
 
         // Dot click handlers
         dots.forEach((dot, index) => {
